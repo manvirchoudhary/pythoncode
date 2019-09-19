@@ -5,26 +5,30 @@ print(". . .Scissor. . .")
 print("      ")
 
 player1 = input("Player 1, make your move : ")
+print("No Cheating!\n\n" * 20)
 player2 = input("Player 2, make your move: ")
-
 print("      ")
 print(" Shoot!")
 
-
-if  "rock" == player1 and "paper" == player2 : 
-       print(" Booom Player 2 Wins ")
-elif "rock" == player2 and "paper" == player1:
-       print(" Boom Player 1 Wins")
-elif "paper" == player1 and "scissor" == player2:
-       print(" Boom Player 2 Wins")  
-elif "paper" == player2 and "scissor" == player1:
-       print(" Boom Player 1 Wins")
-elif "rock" == player1 and "scissor" == player2:
-       print(" Boom Player 1 Wins")
-elif "rock" == player2 and "scissor" == player1:       
-       print(" Boom Player 1 Wins")           
+if player1 == player2:
+       print("It's Tie man!")
+elif player1 == "rock":
+       if player2 == "paper":
+              print(" Booom Player 2 Wins ")
+       elif player2 == "scissor":
+              print(" Boom Player 1 wins")       
+elif player1 == "paper":
+       if player2 == "rock":
+              print("Boom Player 1 wins") 
+       elif player2 == "scissor":
+              print("Boom Player 2 wins")              
+elif player1 == "scissor":
+       if player2 == "rock":
+              print("Boom Player 2 wins")
+       elif player2 == "paper":
+              print("Boom Player 1 wins")           
 else:
-       print(" Don't Cheat , Please restart Again")       
+       print(" Something went wrong, Please restart Again")       
 
             
 
